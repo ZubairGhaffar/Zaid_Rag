@@ -1,0 +1,6 @@
+{
+  "name": "Creative Strategy OS",
+  "description": "Knowledge Hub for ingesting strategic methodology documents and training the Creative Brain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
