@@ -217,7 +217,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen bg-[#09090B] text-[#F4F4F5] overflow-hidden selection:bg-blue-500/30 selection:text-blue-200">
+    <div className="flex h-screen bg-white text-zinc-900 overflow-hidden selection:bg-zinc-900 selection:text-white">
       {/* Sidebar Component */}
       <Sidebar
         activeTab={activeTab}
@@ -238,19 +238,19 @@ export default function App() {
         />
 
         {/* Main Content Area */}
-        <main className="flex-1 overflow-y-auto px-4 md:px-8 py-8 md:py-12">
+        <main className="flex-1 overflow-y-auto px-4 md:px-8 py-8 md:py-12 bg-white">
           {activeTab === 'creative-brain' ? (
             /* Knowledge Ingestion Dashboard View */
             <div className="max-w-[880px] mx-auto space-y-10 animate-in fade-in duration-300">
               {/* Page Subtitle / Context */}
-              <div className="text-center space-y-2 mb-6">
-                <span className="text-[11px] font-mono text-blue-400 uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
+              <div className="text-center space-y-2.5 mb-6">
+                <span className="text-[11px] font-mono text-zinc-700 font-semibold uppercase tracking-widest px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 inline-block shadow-2xs">
                   Creative Strategy OS • Phase 0/1 MVP
                 </span>
-                <h1 className="text-2xl md:text-3xl font-medium tracking-tight text-[#F4F4F5]">
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900">
                   Creative Brain Knowledge Director
                 </h1>
-                <p className="text-xs md:text-sm text-[#A1A1AA] max-[#600px] mx-auto leading-relaxed">
+                <p className="text-xs md:text-sm text-zinc-600 max-w-[600px] mx-auto leading-relaxed">
                   Ingest strategic frameworks, client intelligence briefs, and performance data to train the centralized AI model.
                 </p>
               </div>
@@ -274,7 +274,7 @@ export default function App() {
           ) : (
             /* Alternate Sidebar View Placeholders */
             <div className="max-w-[800px] mx-auto py-12 text-center space-y-6">
-              <div className="w-16 h-16 rounded-2xl bg-[#18181B] border border-[#27272A] flex items-center justify-center mx-auto text-blue-400">
+              <div className="w-16 h-16 rounded-2xl bg-zinc-100 border border-zinc-200 flex items-center justify-center mx-auto text-zinc-900 shadow-2xs">
                 {activeTab === 'executive-team' && <Users className="w-8 h-8" />}
                 {activeTab === 'client-intelligence' && <LineChart className="w-8 h-8" />}
                 {activeTab === 'workflows' && <GitMerge className="w-8 h-8" />}
@@ -282,17 +282,17 @@ export default function App() {
               </div>
 
               <div className="space-y-2">
-                <h2 className="text-lg font-medium text-[#F4F4F5] capitalize">
+                <h2 className="text-lg font-bold text-zinc-900 capitalize">
                   {activeTab.replace('-', ' ')} View
                 </h2>
-                <p className="text-xs text-[#A1A1AA] max-w-md mx-auto">
+                <p className="text-xs text-zinc-500 max-w-md mx-auto">
                   This section is planned for Phase 2. The primary operational focus of this MVP is the Knowledge Ingestion engine.
                 </p>
               </div>
 
               <button
                 onClick={() => setActiveTab('creative-brain')}
-                className="px-4 py-2 bg-[#3B82F6] hover:bg-blue-600 text-white text-xs font-medium rounded-lg transition-colors inline-flex items-center gap-2"
+                className="px-5 py-2.5 bg-black hover:bg-zinc-800 text-white text-xs font-medium rounded-lg transition-colors inline-flex items-center gap-2 cursor-pointer shadow-xs"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>Return to Knowledge Ingestion</span>
